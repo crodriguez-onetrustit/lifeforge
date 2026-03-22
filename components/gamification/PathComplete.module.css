@@ -1,0 +1,97 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(245, 158, 11, 0.2);
+}
+
+.emoji {
+  font-size: 56px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin: 0 0 8px;
+}
+
+.title {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+}
+
+.reward {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.xp {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-primary);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.coin {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-success);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.message {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+.button {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--accent-primary);
+  color: #0f0f0f;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
+}
+
+.button:active {
+  transform: translateY(0);
+}

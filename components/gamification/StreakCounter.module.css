@@ -1,0 +1,80 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.active {
+  border-color: #f97316;
+  background: rgba(249, 115, 22, 0.08);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.intense {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  animation: intense-pulse 1.2s ease-in-out infinite;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.25);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px rgba(249, 115, 22, 0.2); }
+  50% { box-shadow: 0 0 12px rgba(249, 115, 22, 0.5); }
+}
+
+@keyframes intense-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.7);
+    transform: scale(1.04);
+  }
+}
+
+.fire {
+  font-size: 18px;
+  display: inline-block;
+}
+
+.active .fire {
+  animation: fire-bounce 2s ease-in-out infinite;
+}
+
+.intense .fire {
+  animation: fire-bounce 0.8s ease-in-out infinite;
+}
+
+@keyframes fire-bounce {
+  0%, 100% { transform: scale(1) rotate(-3deg); }
+  50% { transform: scale(1.15) rotate(3deg); }
+}
+
+.count {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 2px;
+}
