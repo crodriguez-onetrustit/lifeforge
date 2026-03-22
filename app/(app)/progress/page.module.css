@@ -1,0 +1,145 @@
+.levelCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+.levelBadge {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: var(--space-5) var(--space-6);
+  border-radius: var(--radius-xl);
+  white-space: nowrap;
+}
+
+.levelDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.xpDisplay {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.xpNum {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.xpLabel {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.xpNext {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.xpNext span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.progressBar {
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  max-width: 320px;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent-primary);
+  border-radius: var(--radius-pill);
+  transition: width var(--transition-base);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+}
+
+.stat {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.statNum {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.levelList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.levelRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+
+.levelCurrent {
+  border-color: var(--accent-primary);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.levelDone {
+  opacity: 0.5;
+}
+
+.levelTitle {
+  flex: 1;
+  font-weight: 500;
+}
+
+.levelXP {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.check {
+  color: var(--accent-success);
+  font-weight: 700;
+}
+
+.currentBadge {
+  color: var(--accent-primary);
+  font-weight: 700;
+}
