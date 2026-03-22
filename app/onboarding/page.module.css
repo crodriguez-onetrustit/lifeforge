@@ -1,0 +1,92 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  padding: var(--space-4);
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.progress {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-tertiary);
+  transition: all var(--transition-base);
+}
+
+.dotActive {
+  background: var(--accent-primary);
+  width: 24px;
+}
+
+.dotDone {
+  background: var(--accent-success);
+  width: 8px;
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.content h1 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.skipBtn {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: var(--space-2) var(--space-4);
+  transition: color var(--transition-fast);
+}
+
+.skipBtn:hover {
+  color: var(--text-primary);
+}
+
+.ctaButton {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-md);
+  width: 100%;
+  transition: opacity var(--transition-fast);
+}
+
+.ctaButton:hover {
+  opacity: 0.85;
+}
