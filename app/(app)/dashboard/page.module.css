@@ -1,8 +1,18 @@
 .hero {
-  margin-bottom: var(--space-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-8);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border);
 }
 
-.logo {
+.heroLeft {
+  flex: 1;
+}
+
+.logoRow {
   display: flex;
   align-items: center;
   gap: var(--space-3);
@@ -14,81 +24,274 @@
 }
 
 .tagline {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
   font-style: italic;
+  margin-bottom: var(--space-4);
 }
 
-.userStats {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: var(--space-4);
-  margin-bottom: var(--space-10);
+.levelPill {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
-.statCard {
+.heroRight {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.bigXp {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  line-height: 1;
+}
+
+.bigXpLabel {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-1);
+}
+
+/* Streak Banner */
+.streakBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-8);
+  gap: var(--space-4);
+}
+
+.streakLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.streakEmoji {
+  font-size: 1.5rem;
+}
+
+.streakText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.streakRight {
+  font-size: 0.875rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.noSession {
+  color: var(--accent-secondary);
+}
+
+.sessionCount {
+  color: var(--accent-success);
+}
+
+/* Skills Row */
+.skillsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 900px) {
+  .skillsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.radarCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.sectionSub {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-4);
+}
+
+.radar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-4) 0;
+}
+
+.radarSvg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+.overallProgress {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+}
+
+.overallProgress strong {
+  color: var(--accent-primary);
+}
+
+/* Quick Stats */
+.quickStats {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.qsHeader {
+  margin-bottom: var(--space-4);
+}
+
+.qsHeader h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.qsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.qsStat {
+  background: var(--bg-tertiary);
   border-radius: var(--radius-lg);
-  padding: var(--space-5);
+  padding: var(--space-3);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-1);
 }
 
-.statLabel {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-tertiary);
-  font-weight: 500;
-}
-
-.statValue {
+.qsNum {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--accent-primary);
 }
 
-.welcome {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-10);
+.qsLabel {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
   text-align: center;
+}
+
+/* Sections */
+.section {
   margin-bottom: var(--space-10);
 }
 
-.welcome h2 {
-  margin-bottom: var(--space-2);
-}
-
-.welcome p {
-  margin-bottom: var(--space-6);
-}
-
-.ctaButton {
-  display: inline-block;
-  background: var(--accent-primary);
-  color: var(--bg-primary);
-  font-weight: 600;
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--radius-md);
-  transition: opacity var(--transition-fast);
-}
-
-.ctaButton:hover {
-  opacity: 0.85;
-}
-
-.section {
-  margin-top: var(--space-8);
-}
-
 .section h2 {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
 }
 
+/* Quest Cards */
+.questList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.questCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  transition: border-color var(--transition-fast);
+  cursor: pointer;
+}
+
+.questCard:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.questDone {
+  opacity: 0.5;
+}
+
+.questLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.questNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.questTitle {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: var(--space-1);
+}
+
+.questSource {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.questRight {
+  flex-shrink: 0;
+}
+
+.questXp {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: rgba(245, 158, 11, 0.1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+}
+
+.questComplete {
+  font-size: 0.875rem;
+  color: var(--accent-success);
+  font-weight: 500;
+}
+
+/* Curricula Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -108,7 +311,7 @@
 }
 
 .curriculumCard:hover {
-  border-color: var(--accent-primary);
+  border-color: rgba(245, 158, 11, 0.4);
 }
 
 .cardHeader {
@@ -141,6 +344,7 @@
 .curriculumCard p {
   font-size: 0.875rem;
   flex: 1;
+  color: var(--text-secondary);
 }
 
 .progressBar {
@@ -162,4 +366,44 @@
   font-size: 0.75rem;
   color: var(--text-tertiary);
   text-align: right;
+}
+
+/* Welcome */
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: var(--space-4);
+}
+
+.welcomeIcon {
+  font-size: 4rem;
+}
+
+.welcome h1 {
+  font-size: 2rem;
+}
+
+.welcome p {
+  color: var(--text-secondary);
+  max-width: 400px;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  font-weight: 700;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-md);
+  transition: opacity var(--transition-fast);
+  font-size: 1.1rem;
+  margin-top: var(--space-4);
+}
+
+.ctaButton:hover {
+  opacity: 0.85;
 }

@@ -35,7 +35,7 @@ export async function openEPUB(file: File): Promise<EPUBParseResult> {
   try {
     const cover = await book.loaded.cover;
     if (cover) {
-      coverUrl = await book.archive.createUrl(cover);
+      coverUrl = await book.archive.createUrl(cover, { base64: false });
     }
   } catch {
     // No cover in this EPUB

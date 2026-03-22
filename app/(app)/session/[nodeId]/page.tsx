@@ -5,10 +5,11 @@ import { useRouter } from 'next/navigation';
 import { db } from '@/lib/db';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { calculateStreak } from '@/lib/xp/streak';
-import { awardSessionXP, XP } from '@/lib/xp/engine';
+import { awardSessionXP } from '@/lib/xp/engine';
 import { calculateLevel } from '@/lib/xp/engine';
 import { PROTOCOL_ORDER, STEP_CONFIG, canProceed, getNextStep, type ProtocolStep } from '@/lib/learning/protocol';
-import type { CurriculumNode } from '@/lib/db/schema';
+import { checkAchievements, ACHIEVEMENT_DISPLAY } from '@/lib/xp/achievements';
+import type { AchievementId } from '@/lib/db/schema';
 import styles from './page.module.css';
 
 interface Props {
@@ -99,7 +100,7 @@ export default function SessionPage({ params }: Props) {
         feynmanAnswer: input,
         feynmanCompleted: true,
         xpEarned: totalXP,
-        coinsEarned,
+        coinsEarned: coinsGained,
         completedAt: Date.now(),
       });
 
